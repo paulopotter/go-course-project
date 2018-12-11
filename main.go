@@ -1,7 +1,7 @@
 package main
 
 import (
-	"log"
+	"fmt"
 
 	"github.com/alecthomas/repr"
 	"github.com/paulopotter/go-course-project/anime"
@@ -10,8 +10,8 @@ import (
 func main() {
 	anime, err := anime.SearchAnime("No%20game")
 	if err == nil {
-		repr.Print(anime)
+		repr.Println(anime)
 	} else {
-		log.Println("Falha ao buscar usuário: ", err)
+		fmt.Println("Falha ao buscar usuário: ", err)
 	}
 }
